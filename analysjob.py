@@ -32,6 +32,7 @@ df = df.filter(col("country").isNotNull())
 
 # Hiển thị kết quả
 df.show(10, truncate=False)
+df = df.limit(2000)
 
 df.write \
     .format("org.elasticsearch.spark.sql") \
